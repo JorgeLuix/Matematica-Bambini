@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    color: #fff;
+}
+#highScoresList {
+    list-style:decimal;
+    font-size: 2.3rem;
+    margin-bottom: 4rem;
+}
+#highScoresList li {
+    padding: 10px;
+}
+.high-Score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+   
+}
+#highScores {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}

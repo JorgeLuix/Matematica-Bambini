@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Josefin+Sans:ital,wght@0,400;1,300&family=Luckiest+Guy&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap'); */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Nova Square', cursive;
+    font-family: "Rubik Doodle Shadow", system-ui, "Roboto", sans-serif;
+    font-weight: 400;
+    
+}
+
+body{
+    background-color: #318ff4;
+}
+
+h1 {
+    font-size: 3.4rem;
+    margin-bottom: 5rem;
+    color: #282727;
+    font-weight: 700;
+
+}
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+}
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    /* padding: 3rem; */
+}
+
+.hidden {
+    display: none;
+}
+.btn {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(28, 26, 26);
+    background: linear-gradient(90deg, rgb(239, 239, 5) 0%, rgb(218, 243, 57) 100%);
+    border-radius: 50px;
+    border-color: rgb(12, 12, 12);
+    box-shadow: 5px 10px 0 -4px rgba(12, 0, 0, 0.6);
+
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(11, 11, 11, 0.6);
+    transition: transform 150ms;
+    transform: scale(1);
+    color: #1f0101;
+}
+
+.btn[disabled]:hover {
+   cursor:not-allowed; 
+    box-shadow: none;
+    transform: none;
+} 
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(2, 107, 18) 0%, rgb(80, 234, 185)
+     100%);
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0  rgba(8, 114, 244, 0.6);
+}
+
+
+.fa-crown {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border: solid black 2px;
+    border-radius: 50px;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+    color: #aaa;
+    font-size: 12px;
+    padding: 5px;
+}
+#finalScore {
+    margin-top: 20px;
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+#saveScorebtn {
+    border: none;
+
+}
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: rgb(28, 26, 26);
+}
+.text-danger {
+    color: rgb(246, 7, 7);
+    font-size: 30em;
+    padding: 0 30px;
+}
+.text-success-risposta {
+    color: rgb(6, 247, 22);
+    font-size: 30em;
+    padding: 0 30px;
+}
+@media only screen and (max-width: 768px) {
+    /* Regole CSS per schermi con larghezza massima di 768px */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .choice-container {
+        min-width: auto; /* Rimuove la larghezza minima delle opzioni */
+    }
+
+    h1 {
+        font-size: 2.4rem; /* Riduce la dimensione del titolo principale */
+        margin-bottom: 3rem;
+    }
+
+    .btn {
+        width: 25rem; 
+    }
+
+    input {
+        width: 80%; /* Riduce la larghezza degli input */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Regole CSS per schermi con larghezza massima di 480px (ad esempio smartphone in modalità portrait) */
+    h1 {
+        font-size: 2rem; /* Riduce ulteriormente la dimensione del titolo principale */
+        margin-bottom: 2rem;
+    }
+
+    .choice-container {
+        font-size: 2rem; /* Riduce la dimensione del testo delle opzioni */
+    }
+
+    .btn {
+        font-size: 1.6rem; /* Riduce la dimensione del testo dei pulsanti */
+    }
+
+    input {
+        font-size: 1rem; /* Riduce la dimensione del testo degli input */
+    }
+}
