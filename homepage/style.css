@@ -29,6 +29,18 @@ h2 {
     font-size: 2.2rem;
     margin-bottom: 4rem;
 }
+
+.featured-name{
+  
+    font-weight: 700;
+    margin-block: 20px;
+  }
+  .typedText{
+    text-transform: capitalize;
+    color: white;
+    font-size: 50px;
+  }
+
 .container {
     width: 100vw;
     display: flex;

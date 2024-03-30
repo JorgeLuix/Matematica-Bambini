@@ -13,10 +13,22 @@ h1{
   color: rgb(239, 239, 5);
   font-weight: 700;
 }
+
+
 a {
   text-decoration: none;
   color: black;
   font-weight: 600;
+}
+.a-sfide {
+    margin: 1px;
+    color: rgb(2, 127, 6);
+  font-weight: 700;
+}
+.a-sfide2 {
+  margin: 1px;
+  color: rgb(248, 4, 4);
+  font-weight: 700;
 }
   
   .container-tab{
@@ -47,7 +59,7 @@ a {
     font-size: 40px!important;
     background: rgb(246, 248, 246);
     border-radius: 20px;
-    border: 2px solid black;
+    border: 3px solid black;
     box-shadow: 5px 10px 0 -4px rgba(12, 0, 0, 0.6);
   }
  
@@ -77,6 +89,7 @@ a {
       padding: 0 25px;
       /* background: rgb(140, 15, 149); */
     }
+    
   }
   @media (min-width: 576px) {
     /* Regole CSS per schermi di almeno 576px di larghezza */
@@ -92,6 +105,7 @@ a {
       height: 150px;
       font-size: 50px !important;
     }
+   
   }
   
   @media (min-width: 768px) {
@@ -100,14 +114,16 @@ a {
       padding: 0 30px;
       background: red;
     }
+   
   }
-  
+   
   @media (min-width: 992px) {
     /* Regole CSS per schermi di almeno 992px di larghezza */
     .container-tab {
       padding: 0 45px;
       background: yellow;
     }
+   
   }
   
   @media (min-width: 1200px) {
