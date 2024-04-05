@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function checkEndGame() {
         if (questionCount >= MAX_REQUESTS || generatedQuestions.length === 0) {
           localStorage.setItem('mostRecentScore', score);
-          window.location.assign('/PageFinale/sfida1.html');
+          window.location.assign('/PageFinale/sfidaEnd2.html');
         }
       }
       
