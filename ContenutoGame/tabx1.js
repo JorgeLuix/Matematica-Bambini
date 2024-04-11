@@ -7,14 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const optionsElement = document.getElementById("options");
     const scoreElement = document.getElementById("score-value");
     const retryButton = document.getElementById("retry");
+    const backButton = document.getElementById("Arrowback");
+    const rightButton = document.getElementById("ArrowRight");
     
   
     let score = 0;
     let questionCount = 0;
     let generatedQuestions = [];
     let incorrectAnswers = [];
+    let gameStarted = false;
 
-    MAX_REQUESTS = 10;
+    const MAX_REQUESTS = 10;
   
     retryButton.addEventListener("click", function() {
       resetGame();
@@ -30,9 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     function generateQuestion() {
-      if (questionCount >= 10) {
+      if (questionCount >= MAX_REQUESTS) {
         showSummary();
+        backButton.removeAttribute("disabled");
+        rightButton.removeAttribute("disabled");
         return;
+      }
+      if (!gameStarted) {
+        backButton.setAttribute("disabled", true);
+        rightButton.setAttribute("disabled", true);
+        gameStarted = true;
       }
   
       let num1, num2;
@@ -148,7 +158,23 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
       startGame();
+
+      backButton.addEventListener("click", function(event) {
+        if (backButton.getAttribute("disabled")) {
+            event.preventDefault();
+            alert("OOPS!! Prima devi finire la tabellina");
+        }
+    });
+    
+      rightButton.addEventListener("click", function(e) {
+        if (rightButton.getAttribute("disabled")) {
+          e.preventDefault();
+          alert("OOPS!! Prima devi finire la tabellina");
+        }
+      });
    
    
   });
+
+
   

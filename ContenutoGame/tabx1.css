@@ -98,8 +98,22 @@ h1 {
     background: linear-gradient(90deg, rgb(239, 239, 5) 0%, rgb(218, 243, 57) 100%);
     box-shadow: 5px 10px 0 -4px rgba(12, 0, 0, 0.6);
   }
+  #Arrowback {
+    display: flex;
+    justify-content: center;
+  }
+  .arrow-left {
+    width: 60px;
+    padding: 10px 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgb(239, 239, 5) 0%, rgb(218, 243, 57) 100%);
+  }
+  .arrow-left:hover {
+    transform: scale(1.1);
+  }
   .contain-btn{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     justify-content: center;
     bottom: 60px;
