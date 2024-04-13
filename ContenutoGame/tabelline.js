@@ -1,4 +1,6 @@
-  /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+
+
+/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
  const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',

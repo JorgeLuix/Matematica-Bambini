@@ -7,14 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const optionsElement = document.getElementById("options");
     const scoreElement = document.getElementById("score-value");
     const retryButton = document.getElementById("retry");
+    const backButton = document.getElementById("Arrowback");
+    
     
   
     let score = 0;
     let questionCount = 0;
     let generatedQuestions = [];
     let incorrectAnswers = [];
+    let gameStarted = false;
 
-    MAX_REQUESTS = 10;
+    const MAX_REQUESTS = 10;
   
     retryButton.addEventListener("click", function() {
       resetGame();
@@ -41,12 +44,20 @@ document.addEventListener("DOMContentLoaded", function() {
       if (questionCount >= 10) {
         showSummary();
         checkEndGame();
-        return;
+        backButton.removeAttribute("disabled");
+        
+      return;
+    }
+    if (!gameStarted) {
+      backButton.setAttribute("disabled", true);
+      
+      gameStarted = true;
+      
       }
   
       let num1, num2;
       do {
-        num1 = Math.floor(Math.random() * 6) + 5;
+        num1 = Math.floor(Math.random() * 7) + 6;
         num2 = Math.floor(Math.random() * 50) + 1;
       } while (generatedQuestions.includes(`${num1} x ${num2}`));
   
@@ -162,7 +173,14 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
       startGame();
-   
+
+      backButton.addEventListener("click", function(event) {
+        if (backButton.getAttribute("disabled")) {
+            event.preventDefault();
+            alert("OOPS!! Prima devi finire la tabellina");
+        }
+    });
+    
    
   });
   
